@@ -19,10 +19,11 @@ export const Sites: Record<SiteId, Site> = {
 		paths: [
 			'/',
 			'/home.php',
-			'/watch',
+			'/watch/',
 			'/marketplace/',
 			'/groups/feed/',
 			'/gaming/feed/',
+			'/gaming/play/',
 		],
 		origins: [
 			'http://www.facebook.com/*',
