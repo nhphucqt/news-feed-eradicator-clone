@@ -24,6 +24,7 @@ export const Sites: Record<SiteId, Site> = {
 			'/groups/feed/',
 			'/gaming/feed/',
 			'/gaming/play/',
+			'/reel/'
 		],
 		origins: [
 			'http://www.facebook.com/*',
