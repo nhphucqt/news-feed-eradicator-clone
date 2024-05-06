@@ -22,12 +22,9 @@ export function enabledStatus(state: SettingsState): EnabledStatus {
 		const siteStatus: SiteStatus = siteStatuses[siteId];
 		if (window.location.host.includes(site.domain)) {
 			// Always disabled if the path doesn't match
-			// console.log(window.location.pathname, site.paths);
-			// console.log(site.paths.some((path) => window.location.pathname.startsWith(path)));
-			if (site.paths.every((path) => !window.location.pathname.startsWith(path))) {
-			// if (site.paths.indexOf(window.location.pathname) === -1) {
-				// console.log('disabled');
-				return { type: 'disabled' };
+			if (site.paths.indexOf(window.location.pathname) === -1
+					&& site.prefixes.some((prefix) => window.location.pathname.startsWith(prefix)) == false) {
+						return { type: 'disabled' };
 			}
 
 			if (siteStatus.type === SiteStatusTag.DISABLED) {
