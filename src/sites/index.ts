@@ -26,7 +26,8 @@ export const Sites: Record<SiteId, Site> = {
 			'/gaming/play/',
 		],
 		prefixes: [
-			'/reel/'
+			'/reel',
+			'/watch'
 		],
 		origins: [
 			'http://www.facebook.com/*',
@@ -60,7 +61,7 @@ export const Sites: Record<SiteId, Site> = {
 		label: 'YouTube',
 		domain: 'youtube.com',
 		paths: ['/', '/feed/trending'],
-		prefixes: [],
+		prefixes: ['/shorts'],
 		origins: ['https://www.youtube.com/*'],
 	},
 	linkedin: {

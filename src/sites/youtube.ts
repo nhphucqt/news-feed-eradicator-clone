@@ -14,19 +14,30 @@ export function eradicate(store: Store) {
 		}
 
 		// Don't do anything if the UI hasn't loaded yet
-		const feed = document.querySelector('#primary');
+		const feed =
+			document.querySelector('#primary') ||
+			document.querySelector('#shorts-container');
 
 		if (feed == null) {
 			return;
 		}
 
-		const container = feed;
+		
+		const container = feed.parentNode;
+
+		// Add News Feed Eradicator quote/info panel
+		// if (container && !isAlreadyInjected()) {
+		// 	// Hack so that injectUI can handle dark theme
+		// 	document.body.style.background = 'var(--yt-spec-general-background-a)';
+
+		// 	injectUI(container, store);
+		// }
+		if (container != null) {
+			container.removeChild(feed);
+		}
 
 		// Add News Feed Eradicator quote/info panel
 		if (container && !isAlreadyInjected()) {
-			// Hack so that injectUI can handle dark theme
-			document.body.style.background = 'var(--yt-spec-general-background-a)';
-
 			injectUI(container, store);
 		}
 	}

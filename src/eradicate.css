@@ -280,7 +280,16 @@ html:not([data-nfe-enabled='false']) #primary > #nfe-container {
 	margin: 64px;
 }
 /* Youtube related */
-#content #related {
+#content #related img {
 	opacity: 0 !important;
-	pointer-events: none !important;
+	/* pointer-events: none !important; */
+}
+
+#content #dismissible #thumbnail ytd-thumbnail {
+	opacity: 0 !important;
+	/* pointer-events: none !important; */
+}
+
+#dismissible .ytd-rich-shelf-renderer {
+	display: none;
 }
