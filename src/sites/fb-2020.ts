@@ -37,13 +37,14 @@ export function eradicate(store: Store) {
 		// Don't do anything if the FB UI hasn't loaded yet
 		const feed =
 			document.querySelector('div.xh8yej3.x1gslohp#watch_feed') || // For watch
+			document.querySelector('div.xh8yej3.xdj266r#watch_feed') || // For watch
 			document.querySelector('div[aria-label=Gaming][role=main]') || // For gaming feed
 			document.querySelector('div.x9f619.x1n2onr6.x1ja2u2z.x2lah0s.x1qjc9v5.x78zum5.x1q0g3np.x1a02dak.xl56j7k.x9otpla.x1n0m28w.x1wsgfga.xp7jhwk') || // For group feed
 			document.querySelector('div.x1xfsgkm.xqmdsaz.x1mtsufr.x1w9j1nh.x1t9mz0v') || // For marketplace feed
 			document.querySelector('div.x6s0dn4.x78zum5.x1q0g3np.x5yr21d.xl56j7k.xh8yej3') || // For reel
 			document.querySelector('div.x1hc1fzr.x1unhpq9.x6o7n8i'); // For new fb layout (Q4 2022)
 
-		// console.log(feed)
+		// console.log(feed);
 		if (feed == null) {
 			return;
 		}
